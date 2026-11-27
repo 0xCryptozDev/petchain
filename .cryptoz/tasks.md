@@ -9,7 +9,8 @@
 - [ ] **push-to-github** — รัน `bash scripts/setup-github.sh` (ต้อง `gh auth login` ก่อน) — *ทางเลือก: สลับ permission mode แล้วให้ Coordinator รันเอง*
 
 ## 📋 งานทีมถัดไป (แตกจาก Team.md)
-- [ ] **jarukit**: implement ฟังก์ชัน stub ใน PetChain.sol (transfer, lost/found, dispute, committee 2-in-3, governance) + ทดสอบ Remix VM + deploy Sepolia + verify Etherscan
+- [x] **jarukit (implement)** — PetChain.sol ครบทุกฟังก์ชัน: transfer 2 ฝ่าย, lost/found, dispute + freeze, resolution 2-in-3, governance 2-in-3, revoke verification, suspension ยกเลิกคำขอโอน (2026-11-27) — ⚠️ ยังไม่ compile/test จริง (Bash ถูก block) ต้องรัน testplan T01–T24 ใน Remix ก่อน deploy
+- [ ] **jarukit**: รัน test matrix ใน test/contracts/remix-testplan.md บน Remix VM ให้ครบ + deploy Sepolia + verify Etherscan
 - [ ] **kanakarn**: auth nonce/signature, pets/evidence API, chip HMAC, event indexer (idempotent + reorg), migrations/seed
 - [ ] **norawat**: routing, design system, shared wallet adapter ฉบับเต็ม, Owner dashboard, public QR verify
 - [ ] **rattanapon**: Vet/Admin pages, dispute/voting UI, E2E test matrix, docs รวบรวม
