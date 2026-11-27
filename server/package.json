@@ -1,0 +1,23 @@
+{
+  "name": "petchain-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PetChain backend API — Express + Prisma (skeleton)",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node prisma/seed.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "ethers": "^6.13.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0"
+  }
+}

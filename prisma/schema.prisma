@@ -1,0 +1,151 @@
+// PetChain Prisma schema — skeleton ตาม Project.md §10
+// ผู้รับผิดชอบ: kanakarn (branch kanakarn/backend)
+// หลักการ: หลักฐานต้นฉบับอยู่ off-chain; เลขชิปเก็บแบบเข้ารหัส + HMAC token; Chain เป็นแหล่งอ้างอิงทะเบียน
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  walletAddress String   @unique @map("wallet_address")
+  role          String   // OWNER | VET | REVIEWER | COMMITTEE (บัญชีจำลองต้นแบบ)
+  status        String   @default("active")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  pets       Pet[]
+  evidence   Evidence[]
+  verifications Verification[]
+  disputes   Dispute[] @relation("Claimant")
+
+  @@map("users")
+}
+
+model Pet {
+  id             String   @id @default(cuid())
+  onchainId      BigInt?  @map("onchain_id") // petId บน contract
+  profileJson    Json     @map("profile")
+  ownerId        String   @map("owner_id")
+  profileVersion Int      @default(1) @map("profile_version")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  owner         User        @relation(fields: [ownerId], references: [id])
+  microchips    Microchip[]
+  evidence      Evidence[]
+  verifications Verification[]
+  disputes      Dispute[]
+  transfers     Transfer[]
+  cards         Card[]
+
+  @@map("pets")
+}
+
+model Microchip {
+  id            String @id @default(cuid())
+  petId         String @map("pet_id")
+  encryptedChip String @map("encrypted_chip") // เลขชิปเข้ารหัส — ห้ามเก็บดิบ
+  chipToken     String @unique @map("chip_token") // HMAC โดย backend (Project.md §5)
+  status        String @default("pending")
+
+  pet Pet @relation(fields: [petId], references: [id])
+
+  @@map("microchips")
+}
+
+model Evidence {
+  id         String   @id @default(cuid())
+  petId      String   @map("pet_id")
+  uploaderId String   @map("uploader_id")
+  storageKey String   @map("storage_key") // local protected storage (ต้นแบบ)
+  digest     String   // digest ของไฟล์จัดรูปแบบแน่นอน + nonce
+  type       String
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  pet      Pet  @relation(fields: [petId], references: [id])
+  uploader User @relation(fields: [uploaderId], references: [id])
+
+  @@map("evidence")
+}
+
+model Verification {
+  id         String   @id @default(cuid())
+  petId      String   @map("pet_id")
+  verifierId String   @map("verifier_id")
+  type       String   // ANIMAL | OWNERSHIP
+  decision   String
+  txHash     String?  @map("tx_hash") // จากธุรกรรมจริงเท่านั้น
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  pet      Pet  @relation(fields: [petId], references: [id])
+  verifier User @relation(fields: [verifierId], references: [id])
+
+  @@map("verifications")
+}
+
+model Dispute {
+  id          String   @id @default(cuid())
+  petId       String   @map("pet_id")
+  claimantId  String   @map("claimant_id")
+  status      String   @default("SUBMITTED")
+  evidenceId  String?  @map("evidence_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  pet      Pet            @relation(fields: [petId], references: [id])
+  claimant User           @relation("Claimant", fields: [claimantId], references: [id])
+  votes    DisputeVote[]
+
+  @@map("disputes")
+}
+
+model DisputeVote {
+  disputeId  String @map("dispute_id")
+  reviewerId String @map("reviewer_id")
+  proposalId String @map("proposal_id")
+  decision   String
+
+  @@id([disputeId, reviewerId, proposalId]) // กันโหวตซ้ำ (Project.md §13)
+  @@map("dispute_votes")
+}
+
+model Transfer {
+  id        String   @id @default(cuid())
+  petId     String   @map("pet_id")
+  fromWallet String  @map("from_wallet")
+  toWallet  String   @map("to_wallet")
+  expiry    DateTime
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  pet Pet @relation(fields: [petId], references: [id])
+
+  @@map("transfers")
+}
+
+model Card {
+  petId    String   @map("pet_id")
+  version  Int
+  issuedAt DateTime @default(now()) @map("issued_at")
+  txHash   String?  @map("tx_hash")
+
+  @@id([petId, version])
+  @@map("cards")
+}
+
+model ChainEvent {
+  id         BigInt   @id @default(autoincrement())
+  chainId    Int      @map("chain_id")
+  txHash     String   @map("tx_hash")
+  logIndex   Int      @map("log_index")
+  blockHash  String   @map("block_hash")
+  eventType  String   @map("event_type")
+  payload    Json
+  seenAt     DateTime @default(now()) @map("seen_at")
+
+  @@unique([chainId, txHash, logIndex]) // idempotent sync (Project.md §8)
+  @@map("chain_events")
+}

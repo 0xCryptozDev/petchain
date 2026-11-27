@@ -1,0 +1,33 @@
+{
+  "$comment": "TEMPLATE — เติมค่าจากการ deploy จริงบน Sepolia เท่านั้น ห้ามใส่ค่าลอยๆ คัดลอกเป็น sepolia-YYYYMMDD.json",
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contractName": "PetChain",
+  "contractAddress": null,
+  "deploymentTxHash": null,
+  "deploymentBlock": null,
+  "deployedBy": null,
+  "deployedAt": null,
+  "compiler": {
+    "solc": "0.8.24",
+    "optimizer": { "enabled": true, "runs": 200 },
+    "evmVersion": "paris"
+  },
+  "constructorArgs": {
+    "committee": [null, null, null],
+    "$comment": "address จริง 3 บัญชีของคณะกรรมการ"
+  },
+  "roles": {
+    "admin": null,
+    "vets": [],
+    "reviewers": [],
+    "committee": []
+  },
+  "abiFile": null,
+  "etherscan": {
+    "verified": false,
+    "verifiedAt": null,
+    "url": null
+  },
+  "notes": "อัปเดตโดย jarukit หลัง deploy + verify จริง แล้วแจ้งทีมใน group chat"
+}

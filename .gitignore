@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# Environment — ห้าม commit ค่าจริง ใช้ .env.example เท่านั้น
+.env
+.env.local
+.env.*.local
+
+# Remix artifacts
+.remix/
+artifacts/
+cache/
+
+# Prisma
+prisma/*.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# หลักฐานจริงของผู้ใช้ (ห้ามเข้า Git ตาม spec §5)
+evidence/
+uploads/
