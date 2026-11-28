@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-28T08:17:15.498Z",
+  "title": "Design System: PetChain Vet/Admin — Warm Care",
+  "extensions": {
+    "colorMeta": {
+      "action": {
+        "role": "primary",
+        "displayName": "ส้มอิฐ",
+        "tonalRamp": [
+          "oklch(15% 0.0420 37.6)",
+          "oklch(27% 0.0780 37.6)",
+          "oklch(39% 0.1020 37.6)",
+          "oklch(51% 0.1200 37.6)",
+          "oklch(63% 0.1200 37.6)",
+          "oklch(75% 0.0960 37.6)",
+          "oklch(87% 0.0540 37.6)",
+          "oklch(95% 0.0180 37.6)"
+        ]
+      },
+      "action-deep": {
+        "role": "primary",
+        "displayName": "อิฐเข้ม",
+        "tonalRamp": [
+          "oklch(15% 0.0420 36.4)",
+          "oklch(27% 0.0780 36.4)",
+          "oklch(39% 0.1020 36.4)",
+          "oklch(51% 0.1200 36.4)",
+          "oklch(63% 0.1200 36.4)",
+          "oklch(75% 0.0960 36.4)",
+          "oklch(87% 0.0540 36.4)",
+          "oklch(95% 0.0180 36.4)"
+        ]
+      },
+      "accent-soft": {
+        "role": "neutral",
+        "displayName": "ทรายอ่อน",
+        "tonalRamp": [
+          "oklch(15% 0.0086 71.5)",
+          "oklch(27% 0.0159 71.5)",
+          "oklch(39% 0.0208 71.5)",
+          "oklch(51% 0.0245 71.5)",
+          "oklch(63% 0.0245 71.5)",
+          "oklch(75% 0.0196 71.5)",
+          "oklch(87% 0.0110 71.5)",
+          "oklch(95% 0.0037 71.5)"
+        ]
+      },
+      "ready-line": {
+        "role": "neutral",
+        "displayName": "ready-line",
+        "tonalRamp": [
+          "oklch(15% 0.0095 155.9)",
+          "oklch(27% 0.0176 155.9)",
+          "oklch(39% 0.0230 155.9)",
+          "oklch(51% 0.0270 155.9)",
+          "oklch(63% 0.0270 155.9)",
+          "oklch(75% 0.0216 155.9)",
+          "oklch(87% 0.0122 155.9)",
+          "oklch(95% 0.0041 155.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "หมึกน้ำตาล",
+        "tonalRamp": [
+          "oklch(15% 0.0068 50.3)",
+          "oklch(27% 0.0125 50.3)",
+          "oklch(39% 0.0164 50.3)",
+          "oklch(51% 0.0193 50.3)",
+          "oklch(63% 0.0193 50.3)",
+          "oklch(75% 0.0154 50.3)",
+          "oklch(87% 0.0087 50.3)",
+          "oklch(95% 0.0029 50.3)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "น้ำตาลรอง",
+        "tonalRamp": [
+          "oklch(15% 0.0114 61.8)",
+          "oklch(27% 0.0212 61.8)",
+          "oklch(39% 0.0277 61.8)",
+          "oklch(51% 0.0326 61.8)",
+          "oklch(63% 0.0326 61.8)",
+          "oklch(75% 0.0261 61.8)",
+          "oklch(87% 0.0147 61.8)",
+          "oklch(95% 0.0049 61.8)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "งาช้างอุ่น",
+        "tonalRamp": [
+          "oklch(15% 0.0055 73.7)",
+          "oklch(27% 0.0103 73.7)",
+          "oklch(39% 0.0134 73.7)",
+          "oklch(51% 0.0158 73.7)",
+          "oklch(63% 0.0158 73.7)",
+          "oklch(75% 0.0126 73.7)",
+          "oklch(87% 0.0071 73.7)",
+          "oklch(95% 0.0024 73.7)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "กระดาษขาว",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(27% 0.0000 89.9)",
+          "oklch(39% 0.0000 89.9)",
+          "oklch(51% 0.0000 89.9)",
+          "oklch(63% 0.0000 89.9)",
+          "oklch(75% 0.0000 89.9)",
+          "oklch(87% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "เส้นทราย",
+        "tonalRamp": [
+          "oklch(15% 0.0074 72.1)",
+          "oklch(27% 0.0138 72.1)",
+          "oklch(39% 0.0180 72.1)",
+          "oklch(51% 0.0212 72.1)",
+          "oklch(63% 0.0212 72.1)",
+          "oklch(75% 0.0170 72.1)",
+          "oklch(87% 0.0096 72.1)",
+          "oklch(95% 0.0032 72.1)"
+        ]
+      },
+      "control": {
+        "role": "neutral",
+        "displayName": "ขอบน้ำตาล",
+        "tonalRamp": [
+          "oklch(15% 0.0147 63.2)",
+          "oklch(27% 0.0272 63.2)",
+          "oklch(39% 0.0356 63.2)",
+          "oklch(51% 0.0419 63.2)",
+          "oklch(63% 0.0419 63.2)",
+          "oklch(75% 0.0335 63.2)",
+          "oklch(87% 0.0189 63.2)",
+          "oklch(95% 0.0063 63.2)"
+        ]
+      },
+      "queue-selected": {
+        "role": "neutral",
+        "displayName": "ทรายคิวที่เลือก",
+        "tonalRamp": [
+          "oklch(15% 0.0099 70.9)",
+          "oklch(27% 0.0183 70.9)",
+          "oklch(39% 0.0240 70.9)",
+          "oklch(51% 0.0282 70.9)",
+          "oklch(63% 0.0282 70.9)",
+          "oklch(75% 0.0226 70.9)",
+          "oklch(87% 0.0127 70.9)",
+          "oklch(95% 0.0042 70.9)"
+        ]
+      },
+      "nav-active": {
+        "role": "neutral",
+        "displayName": "ทรายเมนูที่เลือก",
+        "tonalRamp": [
+          "oklch(15% 0.0090 73.2)",
+          "oklch(27% 0.0167 73.2)",
+          "oklch(39% 0.0218 73.2)",
+          "oklch(51% 0.0257 73.2)",
+          "oklch(63% 0.0257 73.2)",
+          "oklch(75% 0.0205 73.2)",
+          "oklch(87% 0.0115 73.2)",
+          "oklch(95% 0.0038 73.2)"
+        ]
+      },
+      "nav-hover": {
+        "role": "neutral",
+        "displayName": "nav-hover",
+        "tonalRamp": [
+          "oklch(15% 0.0049 74.4)",
+          "oklch(27% 0.0092 74.4)",
+          "oklch(39% 0.0120 74.4)",
+          "oklch(51% 0.0141 74.4)",
+          "oklch(63% 0.0141 74.4)",
+          "oklch(75% 0.0113 74.4)",
+          "oklch(87% 0.0064 74.4)",
+          "oklch(95% 0.0021 74.4)"
+        ]
+      },
+      "field-search": {
+        "role": "neutral",
+        "displayName": "field-search",
+        "tonalRamp": [
+          "oklch(15% 0.0034 72.7)",
+          "oklch(27% 0.0062 72.7)",
+          "oklch(39% 0.0081 72.7)",
+          "oklch(51% 0.0096 72.7)",
+          "oklch(63% 0.0096 72.7)",
+          "oklch(75% 0.0077 72.7)",
+          "oklch(87% 0.0043 72.7)",
+          "oklch(95% 0.0014 72.7)"
+        ]
+      },
+      "field-note": {
+        "role": "neutral",
+        "displayName": "field-note",
+        "tonalRamp": [
+          "oklch(15% 0.0016 78.3)",
+          "oklch(27% 0.0029 78.3)",
+          "oklch(39% 0.0038 78.3)",
+          "oklch(51% 0.0045 78.3)",
+          "oklch(63% 0.0045 78.3)",
+          "oklch(75% 0.0036 78.3)",
+          "oklch(87% 0.0020 78.3)",
+          "oklch(95% 0.0007 78.3)"
+        ]
+      },
+      "positive": {
+        "role": "neutral",
+        "displayName": "positive",
+        "tonalRamp": [
+          "oklch(15% 0.0282 153.3)",
+          "oklch(27% 0.0524 153.3)",
+          "oklch(39% 0.0685 153.3)",
+          "oklch(51% 0.0806 153.3)",
+          "oklch(63% 0.0806 153.3)",
+          "oklch(75% 0.0645 153.3)",
+          "oklch(87% 0.0363 153.3)",
+          "oklch(95% 0.0121 153.3)"
+        ]
+      },
+      "pending": {
+        "role": "neutral",
+        "displayName": "pending",
+        "tonalRamp": [
+          "oklch(15% 0.0325 78.6)",
+          "oklch(27% 0.0603 78.6)",
+          "oklch(39% 0.0789 78.6)",
+          "oklch(51% 0.0928 78.6)",
+          "oklch(63% 0.0928 78.6)",
+          "oklch(75% 0.0742 78.6)",
+          "oklch(87% 0.0417 78.6)",
+          "oklch(95% 0.0139 78.6)"
+        ]
+      },
+      "negative": {
+        "role": "neutral",
+        "displayName": "negative",
+        "tonalRamp": [
+          "oklch(15% 0.0377 37.6)",
+          "oklch(27% 0.0700 37.6)",
+          "oklch(39% 0.0915 37.6)",
+          "oklch(51% 0.1077 37.6)",
+          "oklch(63% 0.1077 37.6)",
+          "oklch(75% 0.0861 37.6)",
+          "oklch(87% 0.0485 37.6)",
+          "oklch(95% 0.0162 37.6)"
+        ]
+      },
+      "status-neutral": {
+        "role": "neutral",
+        "displayName": "status-neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0076 157.4)",
+          "oklch(27% 0.0141 157.4)",
+          "oklch(39% 0.0185 157.4)",
+          "oklch(51% 0.0218 157.4)",
+          "oklch(63% 0.0218 157.4)",
+          "oklch(75% 0.0174 157.4)",
+          "oklch(87% 0.0098 157.4)",
+          "oklch(95% 0.0033 157.4)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "error",
+        "tonalRamp": [
+          "oklch(15% 0.0420 25.6)",
+          "oklch(27% 0.0780 25.6)",
+          "oklch(39% 0.1020 25.6)",
+          "oklch(51% 0.1200 25.6)",
+          "oklch(63% 0.1200 25.6)",
+          "oklch(75% 0.0960 25.6)",
+          "oklch(87% 0.0540 25.6)",
+          "oklch(95% 0.0180 25.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "หัวข้อหน้า / ชื่อสัตว์",
+        "purpose": "บริบทหลักของงานตรวจ"
+      },
+      "body": {
+        "displayName": "เนื้อหาไทย",
+        "purpose": "อ่านข้อมูลและหลักฐาน"
+      },
+      "control": {
+        "displayName": "คอนโทรล",
+        "purpose": "ปุ่มและฟอร์ม"
+      },
+      "label": {
+        "displayName": "Metadata",
+        "purpose": "ข้อมูลประกอบ"
+      }
+    },
+    "shadows": [
+      {
+        "name": "navigation",
+        "value": "0 4px 16px rgba(0,0,0,.04)",
+        "purpose": "แถบนำทางขาวลอยเหนือพื้นอุ่น"
+      },
+      {
+        "name": "dropdown",
+        "value": "0 12px 32px rgba(0,0,0,.08)",
+        "purpose": "เมนู listbox ผ่าน portal"
+      },
+      {
+        "name": "tooltip",
+        "value": "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)",
+        "purpose": "Tooltip ชั้นลอย"
+      }
+    ],
+    "motion": [
+      {
+        "name": "case-reveal",
+        "value": "220ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "clip-path/opacity; cancel ก่อน reselection/unmount; ปิดเมื่อ reduced motion"
+      },
+      {
+        "name": "disclosure-evidence",
+        "value": "180ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "clip-path เปิดข้อมูล; ปิดเมื่อ reduced motion"
+      },
+      {
+        "name": "dropdown",
+        "value": "140ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "scaleY/opacity; ปิดเมื่อ reduced motion"
+      },
+      {
+        "name": "press",
+        "value": "100ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "scale .985; ปิดเมื่อ reduced motion"
+      },
+      {
+        "name": "color",
+        "value": "150ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "feedback สีทั่วไปคงอยู่เมื่อ reduced motion"
+      },
+      {
+        "name": "readiness",
+        "value": "180ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "สี/เส้น readiness; no-preference เท่านั้น"
+      },
+      {
+        "name": "tooltip-show-delay",
+        "value": "180ms",
+        "purpose": "หน่วงเปิด"
+      },
+      {
+        "name": "tooltip-gap-delay",
+        "value": "160ms",
+        "purpose": "ช่วงข้ามช่องว่าง"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "wide",
+        "value": "1181px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1536px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "ปุ่มยืนยันหลักพร้อม hover/focus/disabled",
+      "html": "<button class=\"ds-primary\">รับรองตัวสัตว์</button>",
+      "css": ".ds-primary{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;font-size:14px;line-height:20px;font-weight:500;min-height:44px;padding:10px 16px;border-radius:10px;cursor:pointer;transition:background-color .15s cubic-bezier(.4,0,.2,1);background:#c64f29;color:#fff;border:1px solid transparent}.ds-primary:hover{background:#92371d}.ds-primary:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-primary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:no-preference){.ds-primary:active{transform:scale(.985)}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "การกระทำรองบนพื้นขาว",
+      "html": "<button class=\"ds-secondary\">ออกบัตรดิจิทัล</button>",
+      "css": ".ds-secondary{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;font-size:14px;line-height:20px;font-weight:500;min-height:44px;padding:10px 16px;border-radius:10px;cursor:pointer;transition:background-color .15s cubic-bezier(.4,0,.2,1);background:#fff;color:#392e28;border:1px solid #eadfd2}.ds-secondary:hover{background:#f5e8d9}.ds-secondary:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-secondary:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "ช่องค้นหาในคิว",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><circle cx=\"8.5\" cy=\"8.5\" r=\"5.5\"/><path d=\"m13 13 4 4\"/></svg><input type=\"search\" aria-label=\"ค้นหาทะเบียน\" placeholder=\"ค้นหาชื่อ หรือ Pet ID\"/></label>",
+      "css": ".ds-search{position:relative;display:block;max-width:300px;color:#756354}.ds-search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);height:16px;width:16px;pointer-events:none}.ds-search input{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;box-sizing:border-box;appearance:none;width:100%;padding:10px 40px 10px 36px;border:1px solid #ddcdbc;border-radius:10px;background:#fffaf4;color:#392e28;font-size:13px;line-height:1.625}.ds-search input::placeholder{color:#756354}.ds-search input:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}@media(max-width:767px){.ds-search input{min-height:44px}}"
+    },
+    {
+      "name": "Checkbox",
+      "kind": "input",
+      "refersTo": "checkbox",
+      "description": "native semantics กับ checkmark ของระบบ",
+      "html": "<label class=\"ds-check\"><span><input type=\"checkbox\" checked/><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m4 10 4 4 8-8\"/></svg></span>ตรวจตัวสัตว์แล้ว</label>",
+      "css": ".ds-check{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:flex;align-items:center;gap:12px;font-size:13px;color:#392e28}.ds-check>span{position:relative;display:inline-flex;width:20px;height:20px}.ds-check input{appearance:none;box-sizing:border-box;margin:0;width:20px;height:20px;padding:0;border:1px solid #a38b76;border-radius:6px;background:#fff;cursor:pointer}.ds-check input:checked{background:#c64f29;border-color:#c64f29}.ds-check svg{position:absolute;left:2px;top:2px;width:16px;height:16px;color:#fff;pointer-events:none;opacity:0}.ds-check input:checked+svg{opacity:1}.ds-check input:hover{border-color:#c64f29}.ds-check input:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-check input:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Select Trigger",
+      "kind": "input",
+      "refersTo": "select-demo",
+      "description": "ตัวอย่างรูปลักษณ์ combobox; React เป็นเจ้าของ popup และ keyboard behavior",
+      "html": "<button class=\"ds-select\" role=\"combobox\" aria-label=\"บทบาทสาธิต\" aria-expanded=\"false\" aria-haspopup=\"listbox\"><span>สัตวแพทย์</span><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m5 7 5 5 5-5\"/></svg></button>",
+      "css": ".ds-select{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;width:180px;min-height:44px;padding:6px 8px;border:1px solid #eadfd2;border-radius:12px;background:transparent;color:#392e28;font-size:12px;line-height:16px;cursor:pointer}.ds-select svg{width:16px;height:16px;color:#756354}.ds-select:hover{border-color:#c64f29}.ds-select:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-select:disabled{opacity:.5;cursor:not-allowed}@media(max-width:767px){.ds-select{min-height:44px}}"
+    },
+    {
+      "name": "Horizontal Navigation",
+      "kind": "nav",
+      "refersTo": "nav-selected",
+      "description": "แถบเมนูแนวนอนขาวและสถานะเลือกพื้นทรายอ่อน; preview เป็นรูปลักษณ์เท่านั้น",
+      "html": "<nav class=\"ds-nav\" aria-label=\"เมนูตัวอย่าง\"><button aria-current=\"page\">คิวตรวจสัตว์ <span>3</span></button><button>หลักฐานเจ้าของ</button><button>ประวัติรับรอง</button></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px;background:#fff;padding:16px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.04)}.ds-nav button{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 8px;border:0;border-radius:10px;background:transparent;color:#756354;font-size:13px;line-height:20px;font-weight:500;cursor:pointer;transition:background-color 150ms ease-out}.ds-nav button[aria-current]{background:#f1e4d4;color:#392e28;font-weight:600}.ds-nav button:hover{background:#faf3ea;color:#392e28}.ds-nav button:focus-visible{outline:2px solid #c64f29;outline-offset:4px}.ds-nav span{font-size:12px;color:#756354;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Registry Masthead",
+      "kind": "card",
+      "refersTo": "registry-masthead",
+      "description": "หัวทะเบียนบนแผ่นงานขาว ใช้ชื่อย่อจากชื่อจริงและสถานะสามส่วน; demo preview ไม่มีธุรกรรมหรือ disclosure ของ React",
+      "html": "<article class=\"ds-registry\"><div class=\"ds-identity\"><span class=\"ds-mark\" aria-hidden=\"true\">ม</span><div><h2>มะลิ <span>PC-0001</span></h2><p>แมว</p></div></div><dl class=\"ds-states\"><div><dt>ตัวสัตว์</dt><dd>● ยังไม่ตรวจ</dd></div><div><dt>เจ้าของ</dt><dd>● รอพิจารณา</dd></div><div><dt>ทะเบียน</dt><dd class=\"ds-positive\">● ใช้งานได้</dd></div></dl></article>",
+      "css": ".ds-registry{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:24px;color:#392e28;background:#fff;border-radius:16px;padding:20px 28px;max-width:800px}.ds-identity{display:flex;align-items:center;gap:16px;flex:1}.ds-mark{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:#f2e7da;color:#725946;font-size:26px;font-weight:600;flex-shrink:0}.ds-registry h2{margin:0;font-size:27px;line-height:40px;font-weight:600}.ds-registry h2 span{font-size:14px;font-weight:400;color:#c64f29;font-variant-numeric:tabular-nums}.ds-registry p{margin:4px 0 0;font-size:14px;color:#756354}.ds-states{display:flex;gap:20px;margin:0}.ds-registry dt{margin-bottom:4px;font-size:12px;color:#756354}.ds-registry dd{margin:0;font-size:12px;line-height:20px;color:#876322}.ds-registry .ds-positive{color:#356a47}@media(max-width:767px){.ds-registry{padding:20px}.ds-states{width:100%;border-top:1px solid #eadfd2;padding-top:12px;justify-content:space-between}.ds-mark{width:44px;height:44px;font-size:22px}}"
+    },
+    {
+      "name": "Pending Status",
+      "kind": "chip",
+      "refersTo": "status-pending",
+      "description": "จุดและข้อความสถานะ",
+      "html": "<span class=\"ds-status\"><span aria-hidden=\"true\"></span>รอพิจารณา</span>",
+      "css": ".ds-status{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:inline-flex;align-items:center;gap:6px;color:#876322;font-size:13px;line-height:20px}.ds-status>span{width:6px;height:6px;border-radius:50%;background:currentColor}"
+    },
+    {
+      "name": "Tooltip",
+      "kind": "custom",
+      "refersTo": "tooltip",
+      "description": "ตัวอย่างชั้นลอยสำหรับอ่านข้อความเต็ม",
+      "html": "<div class=\"ds-tooltip\" role=\"tooltip\">0x0000000000000000000000000000000000000003</div>",
+      "css": ".ds-tooltip{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:inline-block;max-width:296px;overflow-wrap:anywhere;border-radius:8px;background:#392e28;color:#fff;padding:8px 12px;font-size:12px;line-height:20px;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}"
+    },
+    {
+      "name": "Notes Textarea",
+      "kind": "input",
+      "refersTo": "textarea",
+      "description": "การขยายอัตโนมัติทำใน React",
+      "html": "<label class=\"ds-notes\">บันทึกการพิจารณา<textarea placeholder=\"บันทึกข้อเท็จจริงและเหตุผลประกอบ\"></textarea></label>",
+      "css": ".ds-notes{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:block;max-width:400px;font-size:14px;line-height:20px;font-weight:500;color:#392e28}.ds-notes textarea{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:block;box-sizing:border-box;width:100%;min-height:112px;max-height:360px;margin-top:8px;padding:12px 16px;resize:none;border:1px solid #cdbba8;border-radius:10px;background:#fffdfa;color:#392e28;font-size:14px;font-weight:500;line-height:20px}.ds-notes textarea::placeholder{color:#756354}.ds-notes textarea:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-notes textarea[aria-invalid=true]{border-color:#b94944}"
+    }
+  ],
+  "narrative": {
+    "northStar": "ศูนย์ตรวจรับรองดิจิทัล",
+    "overview": "PetChain Vet/Admin ใช้ visual world **Warm Care** ที่ผู้ใช้เลือก โดยคงแนวคิดศูนย์ตรวจรับรองดิจิทัลและบุคลิกสุขุม แม่นยำ และเป็นมิตร พื้นงาช้างอุ่น ตัวอักษรน้ำตาล และส้มอิฐสร้างบรรยากาศที่อ่านได้นาน เมนูแนวนอนบนพื้นขาวเปิดพื้นที่ให้ข้อมูลและหลักฐานเป็นจุดเด่น\n\nปุ่มและคอนโทรลให้ความรู้สึกนุ่มนวล เป็นมิตร และอ่านง่าย พื้นทำงานขาววางบนพื้นอุ่นโดยใช้ช่องไฟและเส้นบางจัดกลุ่ม เงาอ่อนช่วยแยกแถบนำทางและชั้นลอย การเคลื่อนไหวตอบการเลือกเคสหรือเปิดข้อมูลเท่านั้น เอกสารนี้ครอบคลุมเฉพาะ Vet/Admin ของ rattanapon ตาม PRODUCT.md",
+    "keyCharacteristics": [
+      "พื้นงาช้างอุ่นและหมึกน้ำตาล ส้มอิฐเน้นการกระทำ",
+      "เมนูแนวนอนและพื้นที่อ่านหลักฐานที่เปิดโล่ง",
+      "ข้อความไทยใช้ Noto Sans Thai และลำดับขนาดชัดเจน",
+      "คอนโทรลออกแบบเอง รองรับคีย์บอร์ดและ reduced motion"
+    ],
+    "rules": [
+      {
+        "name": "The Meaningful Clay Rule",
+        "body": "ใช้ส้มอิฐกับการกระทำ การเลือก และเลขทะเบียน สถานะยังคงสีตามความหมายและมีข้อความประกอบ",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "แผ่นงานขาวไม่มีเงาหนา ใช้พื้นที่ว่างและเส้นแบ่งภายใน เงากลางอ่อนสงวนให้แถบนำทางและชั้นลอย ไม่ใช้เงาติดสีบนปุ่ม",
+        "section": "elevation"
+      },
+      {
+        "name": "The Honest Registry Rule",
+        "body": "แสดงชื่อย่อและข้อมูลจาก record ที่เลือก และคงข้อความยังไม่ออกบัตรเมื่อยังไม่มีบัตรจริง",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do ยึดค่าสีและขนาดใน frontmatter และตรวจ source ปัจจุบันก่อนเปลี่ยน",
+      "Do คง visible focus, keyboard navigation, inline error และ reduced motion ของคอนโทรล",
+      "Do ใช้ชื่อย่อ เลขทะเบียน และสถานะจาก record จริงเชื่อมคิวกับรายละเอียด",
+      "Do แยกโหมดสาธิตจากการยืนยันธุรกรรมจริงอย่างชัดเจน"
+    ],
+    "donts": [
+      "Don't คืนหน้าตา native select, checkbox, tooltip หรือ validation bubble โดยไม่รักษาชุดคอนโทรลปัจจุบัน",
+      "Don't เพิ่มกราฟ ตัวเลขสถิติ QR หรือภาพสัตว์ที่สร้างขึ้นแล้วอ้างว่าเป็นข้อมูลจริง",
+      "Don't ใช้สีไล่หลาย hue, glow หรือ animation วนบนองค์ประกอบที่ไม่มีการเปลี่ยนสถานะ",
+      "Don't นำข้อกำหนดนี้ไปครอบ Owner/Public โดยอัตโนมัติ"
+    ]
+  }
+}

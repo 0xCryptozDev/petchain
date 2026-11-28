@@ -1,0 +1,63 @@
+import { test, expect } from "@playwright/test";
+const nav = (page, name) => page.getByRole("button", { name, exact: true }).click();
+async function role(page, name) {
+  await page.getByRole("combobox", { name: "บทบาทสาธิต" }).click();
+  await page.getByRole("option", { name, exact: true }).click();
+}
+test("drafts survive destinations, stay separate between wallets and clear after success", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/?demo=1");
+  const notes = page.getByLabel("บันทึกการพิจารณา");
+  await notes.fill("ร่างของสัตวแพทย์");
+  await page.getByRole("checkbox", { name: "ตรวจตัวสัตว์และลักษณะตรงกับหลักฐานแล้ว" }).check();
+  await nav(page, "ประวัติการรับรอง");
+  await nav(page, "คิวตรวจสัตว์");
+  await expect(notes).toHaveValue("ร่างของสัตวแพทย์");
+  await role(page, "ผู้ตรวจหลักฐาน");
+  await expect(notes).toHaveValue("");
+  await role(page, "สัตวแพทย์");
+  await expect(notes).toHaveValue("ร่างของสัตวแพทย์");
+  await expect(page.getByRole("checkbox", { name: "ตรวจตัวสัตว์และลักษณะตรงกับหลักฐานแล้ว" })).toBeChecked();
+  await page.getByRole("checkbox", { name: "อ่านชิปจากตัวสัตว์และตรวจข้อมูลตรงกันแล้ว" }).check();
+  await nav(page, "รับรองตัวสัตว์");
+  await nav(page, "ยืนยันและลงนาม");
+  await expect(page.getByRole("status")).toContainText("ดำเนินการในโหมดสาธิตแล้ว");
+  await expect(notes).toHaveValue("");
+});
+test("committee selects a named registry and retains proposal when opening its record", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/?demo=1");
+  await role(page, "กรรมการ 1");
+  await nav(page, "มติกรรมการ");
+  await expect(page.getByRole("button", { name: "สร้างข้อเสนอ", exact: true })).toBeDisabled();
+  await page.getByRole("searchbox", { name: "ค้นหาทะเบียนเป้าหมาย" }).fill("PC-0002");
+  await page.getByRole("button", { name: /โมจิ · PC-0002.*เลือกทะเบียน/ }).click();
+  await page.getByLabel("บันทึกการพิจารณา").fill("ตรวจทบทวนทะเบียนโมจิ");
+  await nav(page, "เปิดทะเบียน โมจิ · PC-0002");
+  await expect(page.getByRole("heading", { name: "โมจิ", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "พิจารณา มะลิ", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "มะลิ", exact: true })).toBeVisible();
+  await nav(page, "มติกรรมการ");
+  await expect(page.getByLabel("บันทึกการพิจารณา")).toHaveValue("ตรวจทบทวนทะเบียนโมจิ");
+  await nav(page, "สร้างข้อเสนอ");
+  await expect(page.getByRole("region", { name: "ตรวจสอบก่อนลงนาม" })).toContainText("โมจิ · PC-0002");
+  await nav(page, "ยืนยันและลงนาม");
+  const proposal = page.locator("article").filter({ hasText: "ตรวจทบทวนทะเบียนโมจิ" });
+  await expect(proposal).toContainText("โมจิ · PC-0002");
+  await expect(proposal.getByRole("button", { name: "เปิดทะเบียน โมจิ · PC-0002" })).toBeVisible();
+  await expect(page.getByLabel("บันทึกการพิจารณา")).toHaveValue("");
+});
+test("1280 navigation balances rows and disabled actions explain the required role", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto("/?demo=1");
+  const positions = await page.locator("#pc-navigation > button").evaluateAll((buttons) => buttons.map((b) => Math.round(b.getBoundingClientRect().top)));
+  const rows = Object.values(positions.reduce((rows, top) => ({ ...rows, [top]: (rows[top] || 0) + 1 }), {}));
+  expect(rows).toEqual([4, 3]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await nav(page, "ข้อพิพาท");
+  await expect(page.getByText("ดูคำร้องได้ แต่การรับเรื่องหรือไม่รับคำร้องต้องใช้ Wallet ผู้ตรวจหลักฐานเจ้าของ")).toBeVisible();
+  await expect(page.getByRole("button", { name: "รับเรื่องและระงับโอน" })).toBeDisabled();
+  await nav(page, "จัดการสิทธิ์");
+  await expect(page.getByText("ดูข้อมูลได้ แต่การมอบหรือถอนสิทธิ์ต้องใช้ Wallet ผู้ดูแลสิทธิ์")).toBeVisible();
+  await expect(page.getByRole("button", { name: "ตรวจสอบการเปลี่ยนสิทธิ์" })).toBeDisabled();
+});
