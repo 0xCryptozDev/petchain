@@ -431,12 +431,12 @@
       "css": ".ds-select{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;width:180px;min-height:44px;padding:6px 8px;border:1px solid #eadfd2;border-radius:12px;background:transparent;color:#392e28;font-size:12px;line-height:16px;cursor:pointer}.ds-select svg{width:16px;height:16px;color:#756354}.ds-select:hover{border-color:#c64f29}.ds-select:focus-visible{outline:2px solid #c64f29;outline-offset:4px;}.ds-select:disabled{opacity:.5;cursor:not-allowed}@media(max-width:767px){.ds-select{min-height:44px}}"
     },
     {
-      "name": "Horizontal Navigation",
+      "name": "Sidebar Navigation",
       "kind": "nav",
       "refersTo": "nav-selected",
-      "description": "แถบเมนูแนวนอนขาวและสถานะเลือกพื้นทรายอ่อน; preview เป็นรูปลักษณ์เท่านั้น",
+      "description": "แถบเมนูซ้าย 220px ย่อเป็น rail 76px ได้; preview แสดงสถานะเลือกเท่านั้น",
       "html": "<nav class=\"ds-nav\" aria-label=\"เมนูตัวอย่าง\"><button aria-current=\"page\">คิวตรวจสัตว์ <span>3</span></button><button>หลักฐานเจ้าของ</button><button>ประวัติรับรอง</button></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px;background:#fff;padding:16px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.04)}.ds-nav button{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 8px;border:0;border-radius:10px;background:transparent;color:#756354;font-size:13px;line-height:20px;font-weight:500;cursor:pointer;transition:background-color 150ms ease-out}.ds-nav button[aria-current]{background:#f1e4d4;color:#392e28;font-weight:600}.ds-nav button:hover{background:#faf3ea;color:#392e28}.ds-nav button:focus-visible{outline:2px solid #c64f29;outline-offset:4px}.ds-nav span{font-size:12px;color:#756354;font-variant-numeric:tabular-nums}"
+      "css": ".ds-nav{display:flex;flex-direction:column;width:220px;gap:6px;background:#fff;padding:16px;border-radius:16px;border:1px solid #ddcdbc}.ds-nav button{font-family:\"Noto Sans Thai\",Tahoma,sans-serif;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 8px;border:0;border-radius:10px;background:transparent;color:#392e28;font-size:13px;line-height:20px;font-weight:500;cursor:pointer;transition:background-color 150ms ease-out}.ds-nav button[aria-current]{background:#c64f29;color:#fff;font-weight:600}.ds-nav button:hover{background:#faf3ea;color:#392e28}.ds-nav button:focus-visible{outline:2px solid #c64f29;outline-offset:4px}.ds-nav span{font-size:12px;color:#756354;font-variant-numeric:tabular-nums} .ds-nav button[aria-current] span{color:#fff}.ds-nav button[aria-current]:hover{background:#92371d;color:#fff}"
     },
     {
       "name": "Registry Masthead",
@@ -473,10 +473,10 @@
   ],
   "narrative": {
     "northStar": "ศูนย์ตรวจรับรองดิจิทัล",
-    "overview": "PetChain Vet/Admin ใช้ visual world **Warm Care** ที่ผู้ใช้เลือก โดยคงแนวคิดศูนย์ตรวจรับรองดิจิทัลและบุคลิกสุขุม แม่นยำ และเป็นมิตร พื้นงาช้างอุ่น ตัวอักษรน้ำตาล และส้มอิฐสร้างบรรยากาศที่อ่านได้นาน เมนูแนวนอนบนพื้นขาวเปิดพื้นที่ให้ข้อมูลและหลักฐานเป็นจุดเด่น\n\nปุ่มและคอนโทรลให้ความรู้สึกนุ่มนวล เป็นมิตร และอ่านง่าย พื้นทำงานขาววางบนพื้นอุ่นโดยใช้ช่องไฟและเส้นบางจัดกลุ่ม เงาอ่อนช่วยแยกแถบนำทางและชั้นลอย การเคลื่อนไหวตอบการเลือกเคสหรือเปิดข้อมูลเท่านั้น เอกสารนี้ครอบคลุมเฉพาะ Vet/Admin ของ rattanapon ตาม PRODUCT.md",
+    "overview": "PetChain Vet/Admin ใช้ visual world **Warm Care** ที่ผู้ใช้เลือก โดยคงแนวคิดศูนย์ตรวจรับรองดิจิทัลและบุคลิกสุขุม แม่นยำ และเป็นมิตร พื้นงาช้างอุ่น ตัวอักษรน้ำตาล และส้มอิฐสร้างบรรยากาศที่อ่านได้นาน Sidebar ที่ย่อได้บนพื้นขาวเปิดพื้นที่ให้ข้อมูลและหลักฐานเป็นจุดเด่น\n\nปุ่มและคอนโทรลให้ความรู้สึกนุ่มนวล เป็นมิตร และอ่านง่าย พื้นทำงานขาววางบนพื้นอุ่นโดยใช้ช่องไฟและเส้นบางจัดกลุ่ม เส้นขอบแยกแถบนำทาง เงาใช้กับชั้นลอย การเคลื่อนไหวตอบการเลือกเคสหรือเปิดข้อมูลเท่านั้น เอกสารนี้ครอบคลุมเฉพาะ Vet/Admin ของ rattanapon ตาม PRODUCT.md",
     "keyCharacteristics": [
       "พื้นงาช้างอุ่นและหมึกน้ำตาล ส้มอิฐเน้นการกระทำ",
-      "เมนูแนวนอนและพื้นที่อ่านหลักฐานที่เปิดโล่ง",
+      "Sidebar ด้านซ้ายที่ย่อได้และพื้นที่อ่านหลักฐานที่เปิดโล่ง",
       "ข้อความไทยใช้ Noto Sans Thai และลำดับขนาดชัดเจน",
       "คอนโทรลออกแบบเอง รองรับคีย์บอร์ดและ reduced motion"
     ],

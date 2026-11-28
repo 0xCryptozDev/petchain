@@ -43,9 +43,13 @@
  .pc-wallet-button{@apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-line bg-white px-3 text-xs font-medium hover:bg-[#faf3ea];}
  .pc-wallet-button svg{@apply h-[18px] w-[18px];}
  .pc-main{@apply mx-auto max-w-[1440px] px-10 pb-4 pt-5;}
- .pc-page-context{@apply mb-6 rounded-2xl border border-[#ddcdbc] bg-white p-6;}
- .pc-page-title{@apply mb-5 flex items-center justify-between gap-4;}
- .pc-page-title>div>p{@apply !mt-1.5 text-[13px];}
+ .pc-page-context{@apply mb-6 rounded-2xl border border-[#ddcdbc] bg-white;}
+ .pc-page-title{position:relative;min-height:180px;@apply flex items-start justify-between gap-4 p-6;}
+ .pc-page-art{position:absolute;inset:0;overflow:hidden;border-radius:15px 15px 0 0;pointer-events:none;}
+ .pc-page-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 52%;}
+ .pc-page-title>div:not(.pc-page-art),.pc-page-title>button{position:relative;}
+ .pc-page-context>.pc-demo-notice,.pc-page-context>.pc-live-notice{margin:0 24px;padding:16px 0;}
+ .pc-page-title>div>p{@apply !mt-1.5 text-[13px] text-ink;}
  .pc-page-title>button{@apply rounded-xl border border-[#ddcdbc] bg-white text-ink hover:border-control hover:bg-[#faf3ea];}
  .pc-demo-notice{@apply flex min-h-12 flex-wrap items-center justify-between gap-x-5 gap-y-3 border-t border-line pt-4 text-xs text-muted;}
  .pc-demo-notice [role="combobox"]{@apply !w-[180px] !rounded-xl !border-control !bg-[#fffaf4] !text-ink;}
@@ -136,6 +140,54 @@
 @keyframes pc-popup-open{from{opacity:.8;transform:scaleY(.97)}to{opacity:1;transform:scaleY(1)}}
 
 .pc-registry-options{margin-top:12px;border:1px solid #eadfd2;border-radius:12px;max-height:240px;overflow:auto;}.pc-registry-options button{display:grid;width:100%;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;text-align:left;padding:12px 16px;border-bottom:1px solid #eadfd2;}.pc-registry-options button>span:nth-child(2){grid-column:1;}.pc-registry-options button>span:last-child{grid-column:2;grid-row:1/3;align-self:center;}.pc-registry-options button:last-child{border-bottom:0;}.pc-registry-options button:hover,.pc-registry-options button[aria-pressed="true"]{background:#f5e8d9;}
-@media(min-width:768px) and (max-width:1399px){.pc-top-navigation{display:grid;grid-template-columns:repeat(4,max-content);justify-content:center;}.pc-top-navigation button{white-space:nowrap;}}
 
-@media(min-width:768px) and (max-width:1000px){.pc-navigation-bar{grid-template-columns:minmax(0,1fr) auto;row-gap:16px;}.pc-top-navigation{grid-column:1/-1;grid-row:2;justify-content:start;}.pc-account{grid-column:2;grid-row:1;}}
+
+
+
+
+@media(max-width:767px){.pc-page-title{min-height:220px;padding:20px;}.pc-page-art img{object-position:right 50%;}.pc-page-title>div:not(.pc-page-art){max-width:calc(100% - 56px);}.pc-page-context>.pc-demo-notice,.pc-page-context>.pc-live-notice{margin-left:20px;margin-right:20px;}}
+
+/* Workspace navigation: a persistent rail, with an accessible mobile drawer. */
+.pc-app .pc-main{max-width:none;width:100%;padding:24px 28px 16px;}
+.pc-app .pc-workspace-body{min-width:0;}
+.pc-app .pc-navigation-bar{max-width:none;box-shadow:none;}
+.pc-app .pc-top-navigation{display:flex;flex-direction:column;gap:6px;}
+.pc-top-navigation>span{display:block;width:100%;}
+.pc-app .pc-top-navigation button{position:relative;width:100%;justify-content:flex-start;min-height:44px;padding:10px 12px;white-space:nowrap;font-size:13px;}
+.pc-app .pc-top-navigation button>svg{display:block;width:18px;height:18px;}
+.pc-app .pc-nav-count{margin-left:auto;}
+.pc-app .pc-sidebar-toggle{display:flex;align-items:center;gap:8px;min-height:36px;padding:6px 10px;color:#756354;font-size:12px;}
+.pc-app .pc-sidebar-toggle>span:first-child{display:flex;}
+.pc-menu-backdrop{position:fixed;inset:0;background:rgba(57,46,40,.32);z-index:40;border-radius:0!important;}
+@media(min-width:768px){
+ .pc-app{display:grid;grid-template-columns:220px minmax(0,1fr);align-items:start;}
+ .pc-app:has(.pc-navigation-bar[data-collapsed="true"]){grid-template-columns:76px minmax(0,1fr);}
+ .pc-app .pc-workspace-body{grid-column:2;grid-row:1;}
+ .pc-app .pc-navigation-bar{grid-column:1;grid-row:1;position:sticky;top:16px;margin:16px 0 16px 16px;padding:16px 10px;display:flex;flex-direction:column;align-items:stretch;gap:16px;height:calc(100dvh - 32px);min-height:420px;overflow-y:auto;}
+ .pc-app .pc-brand{font-size:22px;gap:6px;}
+ .pc-app .pc-brand svg{width:26px;height:26px;}
+ .pc-app .pc-brand-row{padding:4px 4px 0;}
+ .pc-app .pc-top-navigation>span:nth-child(4){margin-top:14px;}
+ .pc-app .pc-account{margin-top:auto;padding-top:16px;border-top:1px solid #eadfd2;justify-content:space-between;}
+ .pc-app .pc-account-identity{text-align:left;}
+ .pc-app .pc-mobile-menu{display:none;}
+ .pc-app .pc-navigation-bar[data-collapsed="true"]{padding:16px 7px;}
+ .pc-navigation-bar[data-collapsed="true"] .pc-brand span,.pc-navigation-bar[data-collapsed="true"] .pc-nav-label,.pc-navigation-bar[data-collapsed="true"] .pc-collapse-label,.pc-navigation-bar[data-collapsed="true"] .pc-account-identity,.pc-navigation-bar[data-collapsed="true"] .pc-wallet-button>span{display:none;}
+ .pc-app .pc-navigation-bar[data-collapsed="true"] .pc-top-navigation button{justify-content:center;padding:10px;}
+ .pc-app .pc-navigation-bar[data-collapsed="true"] .pc-nav-count{position:absolute;right:3px;top:1px;font-size:9px;}
+ .pc-app .pc-navigation-bar[data-collapsed="true"] .pc-account{justify-content:center;}
+ .pc-app .pc-navigation-bar[data-collapsed="true"] .pc-wallet-button{padding:10px;}
+}
+@media(max-width:767px){
+ .pc-app .pc-main{padding:16px;}
+ .pc-app .pc-navigation-bar{display:flex;flex-direction:column;margin:16px;padding:16px;gap:20px;}
+ .pc-app .pc-sidebar-toggle{display:none;}
+ .pc-app .pc-navigation-bar .pc-account{display:none;}
+ .pc-app .pc-top-navigation[data-open="false"]{display:none;}
+ .pc-app .pc-navigation-bar[data-open="true"]{display:flex;}
+ .pc-app .pc-navigation-bar[data-open="true"]{position:fixed;inset:0 auto 0 0;margin:0;width:min(320px,calc(100vw - 32px));height:100dvh;border-radius:0;overflow-y:auto;z-index:50;background:#fff;}
+ .pc-app .pc-navigation-bar[data-open="true"] .pc-brand{font-size:22px!important;}
+ .pc-app .pc-navigation-bar[data-open="true"] .pc-account{display:flex;margin-top:auto;}
+ .pc-app .pc-mobile-menu{display:block;}
+}
+@media(prefers-reduced-motion:no-preference){.pc-navigation-bar[role="dialog"]{animation:pc-drawer-open 200ms cubic-bezier(.22,1,.36,1);}@keyframes pc-drawer-open{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}}

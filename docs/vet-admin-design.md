@@ -54,3 +54,9 @@ DESIGN.md เก็บ token frontmatter กับแปดหัวข้อม
 แก้ครบ 4 priority issues ของ critique รอบ Warm Care: เก็บร่างข้ามหน้าแบบแยก Wallet, searchable registry picker พร้อมทางเปิดทะเบียน, คำอธิบายสิทธิ์ใกล้ action และ navigation 1280px เป็น 4+3 รายการ รักษาคู่สี ฟอนต์ และ animation เดิม ไม่เปลี่ยน Backend/Contract/Owner/Public
 
 ร่างเก็บเฉพาะหน่วยความจำระหว่างเปิดแอป ไม่อยู่หลัง reload การสลับ Wallet สาธิตไม่ล้างร่างเดิม แต่ไม่เปิดเผยร่างของอีก Wallet ส่วนการเปลี่ยนบัญชี/เครือข่ายจริงล้างร่างพร้อม invalidate session
+
+## Pet header background
+ใช้ภาพหมาแมวที่สร้างด้วย imagegen เป็นพื้นหลังหัวหน้า รวมกรอบกับแถบโหมดสีขาวด้านล่าง แทนแบนเนอร์แยก ใช้ WebP 36.8 kB ทั้ง desktop/mobile จัดครอปและพื้นที่ข้อความต่างกันตามขนาดจอ ภาพไม่ใช่สัตว์หรือหลักฐานจริงในระบบ ตรวจเว็บจริงแล้วที่ 1440/1280/1024/390px
+
+## Sidebar / full-width workspace
+ย้าย 7 เมนูไป Sidebar 220px ย่อ 76px ได้ บัญชีอยู่ด้านล่าง จอเริ่มต้นต่ำกว่า 1400px เริ่มแบบย่อ มือถือใช้ modal drawer พร้อม keyboard focus/escape/inert ไม่จำกัด max-width ของพื้นที่เนื้อหาแล้ว ตรวจที่ 1920px ว่าใช้พื้นที่ที่เหลือเกิน 1440px ได้จริง

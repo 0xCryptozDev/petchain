@@ -107,3 +107,8 @@ tooltip ไม่คงอยู่เมื่อเลื่อน pointer เ
 Node 14 cases ผ่าน; browser suite เดิม 15 cases ผ่าน และ regression ใหม่ 3 cases ผ่าน รวม 32 cases (Node 14 + browser 18) Production build ผ่าน 195 modules ภาพเว็บจริง 14 ภาพไม่มี page errors ตรวจภาพ 1280px และกรรมการแล้ว
 
 การทดสอบทั้งหมดนี้เป็น demo และ live mock ที่มีอยู่ ยังไม่ใช่การทดสอบ API/Contract/Sepolia จริงของทีม ร่างไม่คงอยู่หลัง reload; registry picker ค้นหาเฉพาะทะเบียนที่ service โหลดมา
+
+## Sidebar และพื้นที่เต็มจอ
+เพิ่ม sidebar.spec.js 2 กรณี: ความกว้างที่ 1920px/ย่อเมนูแล้วร่างอยู่/tooltip และ mobile drawer focus trap/Escape/คืน focus/นำทางแล้วปลด inert ปรับ regression เมนู 1280px จาก horizontal 4+3 เป็น sidebar ที่ขยายได้ และทดสอบ Wallet tooltip หลังขยายแถบ
+
+ผลรอบสุดท้าย: browser 20/20 ผ่าน, production build ผ่าน 196 modules ตรวจขนาด 390/768/1024/1280/1440/1920px ไม่พบ horizontal overflow ตรวจ drawer หลัง animation จบกว้าง 320px ที่ viewport 390px

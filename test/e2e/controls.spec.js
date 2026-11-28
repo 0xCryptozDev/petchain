@@ -55,6 +55,8 @@ test("search clear, wallet tooltip and auto-growing notes use the app controls",
   await expect(
     page.getByRole("heading", { name: "มะลิ", exact: true }),
   ).toBeVisible();
+  const expand = page.getByRole("button", { name: "ขยายเมนูด้านข้าง", exact: true });
+  if (await expand.isVisible()) await expand.click();
   const wallet = page.getByText("0x0000…0003", { exact: true });
   await wallet.hover();
   await expect(page.getByRole("tooltip")).toContainText(

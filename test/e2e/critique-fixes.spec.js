@@ -47,12 +47,13 @@ test("committee selects a named registry and retains proposal when opening its r
   await expect(proposal.getByRole("button", { name: "เปิดทะเบียน โมจิ · PC-0002" })).toBeVisible();
   await expect(page.getByLabel("บันทึกการพิจารณา")).toHaveValue("");
 });
-test("1280 navigation balances rows and disabled actions explain the required role", async ({ page }) => {
+test("1280 sidebar expands and disabled actions explain the required role", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto("/?demo=1");
-  const positions = await page.locator("#pc-navigation > button").evaluateAll((buttons) => buttons.map((b) => Math.round(b.getBoundingClientRect().top)));
-  const rows = Object.values(positions.reduce((rows, top) => ({ ...rows, [top]: (rows[top] || 0) + 1 }), {}));
-  expect(rows).toEqual([4, 3]);
+  await expect(page.locator(".pc-navigation-bar")).toHaveAttribute("data-collapsed", "true");
+  await nav(page, "ขยายเมนูด้านข้าง");
+  await expect(page.locator(".pc-navigation-bar")).toHaveAttribute("data-collapsed", "false");
+  await expect(page.locator("#pc-navigation button")).toHaveCount(7);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await nav(page, "ข้อพิพาท");
   await expect(page.getByText("ดูคำร้องได้ แต่การรับเรื่องหรือไม่รับคำร้องต้องใช้ Wallet ผู้ตรวจหลักฐานเจ้าของ")).toBeVisible();

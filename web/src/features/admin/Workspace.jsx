@@ -1,4 +1,5 @@
 import { DraftContext } from "./Drafts";
+import petsBanner from "./assets/pets-banner.webp";
 import { decisionSummary } from "./decision-summary";
 import { Tooltip } from "./controls";
 import { useEffect, useRef, useState } from "react";
@@ -265,6 +266,9 @@ export function Workspace() {
         >
           <div className="pc-page-context">
           <div className="pc-page-title">
+            <div className="pc-page-art" aria-hidden="true">
+              <img src={petsBanner} width="2172" height="724" alt="" decoding="async" />
+            </div>
             <div>
               <h1>{active[1]}</h1>
               <p className="mt-2 max-w-[65ch] text-sm text-muted">
@@ -285,7 +289,7 @@ export function Workspace() {
           {service.demo ? (
             <DemoNotice role={demoRole} busy={busy} onChange={changeDemoRole} />
           ) : (
-            <div className="mb-6 flex flex-wrap justify-between gap-3 border-y border-line py-3 text-xs text-muted">
+            <div className="pc-live-notice mb-6 flex flex-wrap justify-between gap-3 border-y border-line py-3 text-xs text-muted">
               <span>
                 Ethereum Sepolia · ต้องเชื่อม API และ deployment ของทีม
               </span>
