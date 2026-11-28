@@ -54,4 +54,3 @@ DESIGN.md เก็บ token frontmatter กับแปดหัวข้อม
 แก้ครบ 4 priority issues ของ critique รอบ Warm Care: เก็บร่างข้ามหน้าแบบแยก Wallet, searchable registry picker พร้อมทางเปิดทะเบียน, คำอธิบายสิทธิ์ใกล้ action และ navigation 1280px เป็น 4+3 รายการ รักษาคู่สี ฟอนต์ และ animation เดิม ไม่เปลี่ยน Backend/Contract/Owner/Public
 
 ร่างเก็บเฉพาะหน่วยความจำระหว่างเปิดแอป ไม่อยู่หลัง reload การสลับ Wallet สาธิตไม่ล้างร่างเดิม แต่ไม่เปิดเผยร่างของอีก Wallet ส่วนการเปลี่ยนบัญชี/เครือข่ายจริงล้างร่างพร้อม invalidate session
-

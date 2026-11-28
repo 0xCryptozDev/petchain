@@ -2,7 +2,7 @@
 target: Vet/Admin Warm Care หลัง Unslop
 total_score: 26
 max_score: 40
-na_heuristics: 
+na_heuristics:
 p0_count: 0
 p1_count: 2
 target_identity: "file:C:\\VSCODE\\petchain\\web\\src\\features\\admin\\Workspace.jsx"

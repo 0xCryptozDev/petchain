@@ -2,7 +2,7 @@
 target: Vet/Admin ก่อน craft ใหม่
 total_score: 22
 max_score: 40
-na_heuristics: 
+na_heuristics:
 p0_count: 0
 p1_count: 3
 target_identity: "file:C:\\VSCODE\\petchain\\web\\src\\features\\admin\\Workspace.jsx"

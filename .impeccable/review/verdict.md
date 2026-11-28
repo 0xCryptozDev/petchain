@@ -29,4 +29,3 @@ After the visual review above, a bounded Unslop polish changed navigation spacin
 
 ## Follow-up: critique fixes
 Implemented all four priority findings from 2026-11-28T08-25-03Z: drafts scoped to Wallet and action, named registry selection/context/navigation, permission explanations, balanced 1280 navigation. This is implementation verification, not a new independent heuristic score. Browser regressions cover draft privacy and successful clearing, proposal context and record navigation, and disabled permission states. Existing motion and Warm Care visual world retained. Live backend/chain verification remains pending team integration.
-

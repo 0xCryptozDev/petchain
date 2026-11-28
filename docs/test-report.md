@@ -107,4 +107,3 @@ tooltip ไม่คงอยู่เมื่อเลื่อน pointer เ
 Node 14 cases ผ่าน; browser suite เดิม 15 cases ผ่าน และ regression ใหม่ 3 cases ผ่าน รวม 32 cases (Node 14 + browser 18) Production build ผ่าน 195 modules ภาพเว็บจริง 14 ภาพไม่มี page errors ตรวจภาพ 1280px และกรรมการแล้ว
 
 การทดสอบทั้งหมดนี้เป็น demo และ live mock ที่มีอยู่ ยังไม่ใช่การทดสอบ API/Contract/Sepolia จริงของทีม ร่างไม่คงอยู่หลัง reload; registry picker ค้นหาเฉพาะทะเบียนที่ service โหลดมา
-
